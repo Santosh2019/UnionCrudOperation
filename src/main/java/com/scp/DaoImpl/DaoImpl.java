@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.scp.Dao.UnionDao;
-import com.scp.bean.Union;
+import com.scp.bean.Uniondemo;
 
 public class DaoImpl implements UnionDao{
 
-	List<Union>list=new ArrayList<Union>();
+	List<Uniondemo>list=new ArrayList<Uniondemo>();
 	
 	
-	public boolean addUnion(Union union) {
+	public boolean addUnion(Uniondemo union) {
 		// TODO Auto-generated method stub
 		return list.add(union);
 	}
 
-	public List<Union> getListofUnion() {
+	public List<Uniondemo> getListofUnion() {
 		// TODO Auto-generated method stub
 		return list;
 	}

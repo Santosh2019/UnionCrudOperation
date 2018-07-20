@@ -1,20 +1,27 @@
 package com.scp.bean;
-
-public class Union {
-
-	private String laborName;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+import  javax.persistence.Id;
+@Entity
+@Table
+public class Uniondemo {
+	
+	private String labourName;
+	@Id
 	private int Id;
 	private long AadharNumber;
 	private String gender;
-	public Union(String laborName, int id, long aadharNumber, String gender) {
+	public Uniondemo(String labourName, int id, long aadharNumber, String gender) {
 		super();
-		this.laborName = laborName;
+		this.labourName = labourName;
 		Id = id;
 		AadharNumber = aadharNumber;
 		this.gender = gender;
 	}
 	public String getLaborName() {
-		return laborName;
+		return labourName;
 	}
 	public int getId() {
 		return Id;
@@ -26,7 +33,7 @@ public class Union {
 		return gender;
 	}
 	public void setLaborName(String laborName) {
-		this.laborName = laborName;
+		this.labourName = laborName;
 	}
 	public void setId(int id) {
 		Id = id;
@@ -39,8 +46,6 @@ public class Union {
 	}
 	@Override
 	public String toString() {
-		return "\n Name :" + laborName + " |   \tId :" + Id + " | \tAadhar Number :" + AadharNumber + " | \tGender :" + gender+ "";
+		return "\n Name :" + labourName + " |   \tId :" + Id + " | \tAadhar Number :" + AadharNumber + " | \tGender :" + gender+ "";
 	}
-	
-
 }

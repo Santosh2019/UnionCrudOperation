@@ -2,11 +2,11 @@ package com.scp.Service;
 
 import java.util.List;
 
-import com.scp.bean.Union;
+import com.scp.bean.Uniondemo;
 
 public interface Service {
 	
-	public boolean addunion(Union union);
-	public List<Union>getAllUnion();
+	public boolean addunion(Uniondemo union);
+	public List<Uniondemo>getAllUnion(Uniondemo union);
 
 }
