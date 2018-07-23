@@ -6,7 +6,7 @@ import com.scp.bean.Uniondemo;
 
 public interface Service {
 	
-	public boolean addunion(Uniondemo union);
-	public List<Uniondemo>getAllUnion(Uniondemo union);
+	public Uniondemo addunion(Uniondemo union);
+	public List<Uniondemo>getAllUnion();
 
 }

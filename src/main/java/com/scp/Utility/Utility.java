@@ -6,20 +6,31 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class Utility {
-	private static SessionFactory sessionFactory=null;
+	private static SessionFactory sessionFactory;
 	public static SessionFactory getsessionFactory() {
-		if(sessionFactory==null) {
+	if(sessionFactory==null) {
 			sessionFactory=new Configuration().configure("/hibernate.cfg.xml").buildSessionFactory();
+			
 			
 		}
 		return sessionFactory;
 		
 	}
+	public static Session getSession(Session session) {
+		if(session!=null) {
+			session=sessionFactory.getCurrentSession();
+		}
+			
+		return session;
+		
+	}
+	
 	public static Session fulshNCommit(Session session1, Transaction tr) {
-		if(session1!=null) {
+		
+		if(session1==null) {
 			session1.flush();
 		}
-		if(tr!=null) {
+		if(tr==null) {
 			tr.commit();
 		}
 		return session1;
