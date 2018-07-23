@@ -13,6 +13,7 @@ public class TestLogic {
 		Uniondemo union3 = new Uniondemo("Venketesh", 103, 958092379365L, "Male");
 		Uniondemo union4 = new Uniondemo("LaxmiPati", 104, 918092379365L, "Male");
 		System.out.println("Hello");
+		System.out.println("Hello2");
 		Service service = new ServiceImplementation();
 		service.addunion(union1);
 		service.addunion(union2);
